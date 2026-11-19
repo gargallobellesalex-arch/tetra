@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf9f7"><meta name="description" content="Tetra — Organitza les teves prioritats.">
+<title>Tetra — Prioritats</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="locales.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="header">
+<a href="./" class="brand" aria-label="Tetra"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Tetra</a>
+<div class="header-actions"><select id="language" aria-label="Idioma"></select><button id="help" class="icon-button" aria-label="Ajuda">?</button></div>
+</header>
+<main>
+<div class="toolbar"><div class="tabs" role="tablist" aria-label="Tasques"><button id="pending-tab" role="tab" aria-selected="true"><span data-i18n="pending">Pendents</span><span id="pending-count" class="tab-count">0</span></button><button id="done-tab" role="tab" aria-selected="false"><span data-i18n="done">Fetes</span><span id="done-count" class="tab-count">0</span></button></div><button id="example">Exemple</button></div>
+<div class="matrix-frame">
+  <section class="board" id="board" aria-label="Matriu de prioritats"></section>
+  <button id="export" class="icon-button" aria-label="Descarrega"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg></button>
+</div>
+<footer><span id="save-status" role="status"></span></footer>
+</main>
+<div id="toast" class="toast" role="status" hidden><span id="toast-text"></span><button id="undo" data-i18n="undo">Desfés</button></div>
+<dialog id="help-dialog"><button class="dialog-close" data-close="help-dialog" aria-label="Tanca">×</button><h2 data-i18n="help">Com funciona</h2><dl id="help-quadrants"></dl><p data-i18n="instructions"></p><p class="privacy-note" data-i18n="privacy"></p><button class="primary-button" data-close="help-dialog" data-i18n="ok">Entesos</button></dialog>
+<dialog id="edit-dialog"><button class="dialog-close" data-close="edit-dialog" aria-label="Tanca">×</button><h2 data-i18n="edit">Edita</h2><form id="edit-form"><label for="edit-text" data-i18n="task">Tasca</label><input id="edit-text" maxlength="240" required autocomplete="off"><button class="primary-button" type="submit" data-i18n="save">Desa</button></form></dialog>
+<dialog id="task-dialog"><button class="dialog-close" data-close="task-dialog" aria-label="Tanca">×</button><h2 id="task-dialog-title"></h2><button id="edit-task" class="menu-button" data-i18n="edit">Edita</button><label for="move-task" data-i18n="move">Mou a</label><select id="move-task"></select><button id="delete-task" class="menu-button danger" data-i18n="remove">Elimina</button></dialog>
+</body></html>
+
+

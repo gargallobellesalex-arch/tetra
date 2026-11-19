@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-route="en">
+<head>
+<base href="./">
+<link rel="canonical" href="https://gargallobellesalex-arch.github.io/tetra/en.html">
+<link rel="alternate" hreflang="ca" href="https://gargallobellesalex-arch.github.io/tetra/ca.html">
+<link rel="alternate" hreflang="en" href="https://gargallobellesalex-arch.github.io/tetra/en.html">
+<link rel="alternate" hreflang="es" href="https://gargallobellesalex-arch.github.io/tetra/es.html">
+<link rel="alternate" hreflang="zh" href="https://gargallobellesalex-arch.github.io/tetra/zh.html">
+<link rel="alternate" hreflang="de" href="https://gargallobellesalex-arch.github.io/tetra/de.html">
+<link rel="alternate" hreflang="fr" href="https://gargallobellesalex-arch.github.io/tetra/fr.html">
+<link rel="alternate" hreflang="it" href="https://gargallobellesalex-arch.github.io/tetra/it.html">
+<link rel="alternate" hreflang="pt" href="https://gargallobellesalex-arch.github.io/tetra/pt.html">
+<link rel="alternate" hreflang="pl" href="https://gargallobellesalex-arch.github.io/tetra/pl.html">
+<link rel="alternate" hreflang="ru" href="https://gargallobellesalex-arch.github.io/tetra/ru.html">
+<link rel="alternate" hreflang="ar" href="https://gargallobellesalex-arch.github.io/tetra/ar.html">
+<link rel="alternate" hreflang="hi" href="https://gargallobellesalex-arch.github.io/tetra/hi.html">
+<link rel="alternate" hreflang="ja" href="https://gargallobellesalex-arch.github.io/tetra/ja.html">
+<link rel="alternate" hreflang="ko" href="https://gargallobellesalex-arch.github.io/tetra/ko.html">
+<link rel="alternate" hreflang="id" href="https://gargallobellesalex-arch.github.io/tetra/id.html">
+<link rel="alternate" hreflang="tr" href="https://gargallobellesalex-arch.github.io/tetra/tr.html">
+<link rel="alternate" hreflang="bn" href="https://gargallobellesalex-arch.github.io/tetra/bn.html">
+<link rel="alternate" hreflang="ur" href="https://gargallobellesalex-arch.github.io/tetra/ur.html">
+<link rel="alternate" hreflang="pcm" href="https://gargallobellesalex-arch.github.io/tetra/pcm.html">
+<link rel="alternate" hreflang="arz" href="https://gargallobellesalex-arch.github.io/tetra/arz.html">
+<link rel="alternate" hreflang="mr" href="https://gargallobellesalex-arch.github.io/tetra/mr.html">
+<link rel="alternate" hreflang="te" href="https://gargallobellesalex-arch.github.io/tetra/te.html">
+<link rel="alternate" hreflang="ha" href="https://gargallobellesalex-arch.github.io/tetra/ha.html">
+<link rel="alternate" hreflang="x-default" href="https://gargallobellesalex-arch.github.io/tetra/">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf9f7"><meta name="description" content="Priority matrix. Type in any quadrant. Drag tasks or move them using the ··· menu.">
+<title>Tetra · Priority matrix (Eisenhower)</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="locales.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="header">
+<a href="./" class="brand" aria-label="Tetra"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Tetra</a>
+<div class="header-actions"><select id="language" aria-label="Language"></select><button id="help" class="icon-button" aria-label="How it works">?</button></div>
+</header>
+<main>
+<div class="toolbar"><div class="tabs" role="tablist" aria-label="Task"><button id="pending-tab" role="tab" aria-selected="true"><span data-i18n="pending">To do</span><span id="pending-count" class="tab-count">0</span></button><button id="done-tab" role="tab" aria-selected="false"><span data-i18n="done">Done</span><span id="done-count" class="tab-count">0</span></button></div><button id="example">Example</button></div>
+<div class="matrix-frame">
+  <section class="board" id="board" aria-label="Priority matrix"><article class="quadrant" data-q="0"><div class="q-header"><h2>Now</h2></div><p class="static-hint">Important and urgent</p></article>
+<article class="quadrant" data-q="1"><div class="q-header"><h2>Plan</h2></div><p class="static-hint">Important, not urgent</p></article>
+<article class="quadrant" data-q="2"><div class="q-header"><h2>Delegate</h2></div><p class="static-hint">Not important, urgent</p></article>
+<article class="quadrant" data-q="3"><div class="q-header"><h2>Eliminate</h2></div><p class="static-hint">Neither important nor urgent</p></article></section>
+  <button id="export" class="icon-button" aria-label="Download tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg></button>
+</div>
+<footer><span id="save-status" role="status"></span></footer>
+</main>
+<div id="toast" class="toast" role="status" hidden><span id="toast-text"></span><button id="undo" data-i18n="undo">Undo</button></div>
+<dialog id="help-dialog"><button class="dialog-close" data-close="help-dialog" aria-label="Close">×</button><h2 data-i18n="help">How it works</h2><dl id="help-quadrants"></dl><p data-i18n="instructions">Type in any quadrant. Drag tasks or move them using the ··· menu.</p><p class="privacy-note" data-i18n="privacy">Tasks are saved only in this browser. They do not sync. Download a copy before clearing your browser data.</p><button class="primary-button" data-close="help-dialog" data-i18n="ok">Got it</button></dialog>
+<dialog id="edit-dialog"><button class="dialog-close" data-close="edit-dialog" aria-label="Close">×</button><h2 data-i18n="edit">Edit</h2><form id="edit-form"><label for="edit-text" data-i18n="task">Task</label><input id="edit-text" maxlength="240" required autocomplete="off"><button class="primary-button" type="submit" data-i18n="save">Save</button></form></dialog>
+<dialog id="task-dialog"><button class="dialog-close" data-close="task-dialog" aria-label="Close">×</button><h2 id="task-dialog-title"></h2><button id="edit-task" class="menu-button" data-i18n="edit">Edit</button><label for="move-task" data-i18n="move">Move to</label><select id="move-task"></select><button id="delete-task" class="menu-button danger" data-i18n="remove">Delete</button></dialog>
+</body></html>
+
+
