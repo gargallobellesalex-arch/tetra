@@ -21,7 +21,6 @@ alternateTags.push('<link rel="alternate" hreflang="x-default" href="' + pageUrl
 for (const route of ['', ...routes]) {
   const lang = route || 'ca';
   const locale = locales[lang];
-  const title = 'Tetra · ' + locale.board + ' (Eisenhower)';
   const description = locale.board + '. ' + locale.instructions;
   const dir = ['ar', 'arz', 'ur'].includes(lang) ? 'rtl' : 'ltr';
   const headings = locale.titles.map((heading, i) =>
@@ -36,7 +35,6 @@ for (const route of ['', ...routes]) {
   ].join('\n');
   let html = template.replace('<html lang="ca">', '<html lang="' + lang + '" dir="' + dir + '" data-route="' + route + '">')
     .replace('<head>', '<head>\n' + head)
-    .replace(/<title>.*?<\/title>/, '<title>' + escape(title) + '</title>')
     .replace(/(<meta name="description" content=")[^"]+/, '$1' + escape(description))
     .replace('aria-label="Matriu de prioritats"></section>', 'aria-label="' + escape(locale.board) + '">' + headings + '</section>')
     .replace(/(data-i18n="([^"]+)"[^>]*>)[^<]*/g, (match, prefix, key) => prefix + escape(locale[key]))

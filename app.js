@@ -37,7 +37,6 @@ function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.class
 function translate(){
  document.documentElement.dir = ['ar', 'arz', 'ur'].includes(lang) ? 'rtl' : 'ltr';
  document.documentElement.lang = lang;
- document.title = 'Tetra · ' + t('board') + ' (Eisenhower)';
  document.querySelector('meta[name=description]').content = t('board') + '. ' + t('instructions');
  document.querySelector('link[rel=canonical]').href = document.querySelector('link[hreflang="' + canonicalLanguage + '"]').href;
  $('#language').value = lang;
@@ -96,6 +95,6 @@ $('#edit-task').onclick=()=>{const task=tasks().find(t=>t.id===editing);if(!task
 $('#delete-task').onclick=()=>{mutate(()=>{const list=tasks(),index=list.findIndex(t=>t.id===editing);if(index>=0)list.splice(index,1)},t('removed'));$('#task-dialog').close()};
 $('#edit-form').onsubmit=e=>{e.preventDefault();const value=$('#edit-text').value.trim();if(!value)return;const task=tasks().find(t=>t.id===editing);if(task)mutate(()=>{task.text=value;delete task.sampleIndex},t('updated'));$('#edit-dialog').close()};
 $('#undo').onclick=()=>{if(!undoState)return;({personal,demoTasks,demo}=undoState);undoState=null;persist();render();$('#toast').hidden=true};
-$('#export').onclick=()=>{const text=t('titles').map((title,i)=>title.toUpperCase()+'\n'+tasks().filter(t=>t.q===i).map(task=>(task.done?'[x] ':'[ ] ')+taskText(task)).join('\n')).join('\n\n');const url=URL.createObjectURL(new Blob(['TETRA · '+t('title')+'\n\n'+text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='tetra-'+lang+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify(t('downloaded'),false)};
+$('#export').onclick=()=>{const text=t('titles').map((title,i)=>title.toUpperCase()+'\n'+tasks().filter(t=>t.q===i).map(task=>(task.done?'[x] ':'[ ] ')+taskText(task)).join('\n')).join('\n\n');const url=URL.createObjectURL(new Blob(['PrioriQuad · '+t('title')+'\n\n'+text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='prioriquad-'+lang+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify(t('downloaded'),false)};
 render();
 

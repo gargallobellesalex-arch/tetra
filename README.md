@@ -1,16 +1,16 @@
-# Tetra
+# PrioriQuad
 
 Matriu de prioritats 2 × 2 en 23 llengües. HTML, CSS i JavaScript estàtics. No requereix compilació, claus, fonts remotes ni base de dades.
 
-[Obre Tetra](https://gargallobellesalex-arch.github.io/tetra/)
+[Obre PrioriQuad](https://gargallobellesalex-arch.github.io/tetra/)
 
 ## Publicació
 
-Descomprimeix el paquet i puja els fitxers a l'arrel del repositori mantenint els noms. A GitHub Pages, selecciona «Deploy from a branch», la branca que contingui els fitxers i la carpeta arrel. En altres allotjaments estàtics, publica la carpeta que conté index.html. Les rutes relatives permeten servir Tetra en un subdirectori.
+Descomprimeix el paquet i puja els fitxers a l'arrel del repositori mantenint els noms. A GitHub Pages, selecciona «Deploy from a branch», la branca que contingui els fitxers i la carpeta arrel. En altres allotjaments estàtics, publica la carpeta que conté index.html. Les rutes relatives permeten servir PrioriQuad en un subdirectori.
 
 ## Idioma i dades
 
-Cada llengua té una pàgina pròpia, com ara `ca.html`, `es.html` o `fr.html`. Els enllaços antics amb `?lang=fr` també funcionen. A la portada, Tetra fa servir la preferència desada o una llengua compatible del navegador. El català és l'última opció de reserva.
+Cada llengua té una pàgina pròpia, com ara `ca.html`, `es.html` o `fr.html`. Els enllaços antics amb `?lang=fr` també funcionen. A la portada, PrioriQuad fa servir la preferència desada o una llengua compatible del navegador. El català és l'última opció de reserva.
 
 Codis: ca, en, es, zh (xinès simplificat), de, fr, it, pt (portuguès del Brasil), pl, ru, ar, hi, ja, ko, bn, id, ur, pcm, arz, mr, te, ha, tr.
 
